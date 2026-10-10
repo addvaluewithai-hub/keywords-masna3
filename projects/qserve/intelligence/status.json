@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "project": "qserve",
+  "last_reasoning_session": "2026-10-10",
+  "analysis_path": "projects/qserve/intelligence/semantic-review-2026-10-10.json",
+  "analysis_snapshot_keyword_count": 34,
+  "review_coverage": 34,
+  "decision_counts": {
+    "focus": 14,
+    "investigate": 4,
+    "exclude": 7,
+    "hold": 4,
+    "support": 2,
+    "variant": 2,
+    "competitor_watch": 1
+  },
+  "analysis_status": "complete_agent_review_serp_unverified",
+  "keyword_data_does_not_equal_market_demand": true,
+  "next_recommended_agent_actions": [
+    {
+      "id": "qserve-serp-english-qr",
+      "type": "reasoned_serp_review",
+      "locale": "en-US",
+      "cluster": "qr-digital-menu",
+      "goal": "Separate QR menus from screen signage. Review 5-10 SERP results per priority term, then decide page type."
+    },
+    {
+      "id": "qserve-serp-mexico-software",
+      "type": "reasoned_serp_review",
+      "locale": "es-MX",
+      "cluster": "digital-menu-software",
+      "goal": "Determine whether menu software queries imply POS or just QR menus."
+    },
+    {
+      "id": "qserve-serp-brazil-pricing",
+      "type": "reasoned_serp_review",
+      "locale": "pt-BR",
+      "cluster": "qr-digital-menu",
+      "goal": "Assess restaurant/cafe commercial intent; avoid claiming a free tier."
+    },
+    {
+      "id": "qserve-gap-discovery",
+      "type": "bounded_suggestion_research",
+      "goal": "Research table-linked menus and guest actions with genuine provider evidence; don't invent demand."
+    }
+  ],
+  "automation_boundary": "GitHub workflows may collect/validate data; semantic decisions are authored during connected agent execution and must not be overwritten by heuristics."
+}

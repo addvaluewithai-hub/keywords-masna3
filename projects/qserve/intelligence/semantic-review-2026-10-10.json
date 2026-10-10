@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "project": "qserve",
+  "analysis_id": "qserve-semantic-review-2026-10-10",
+  "author": {
+    "role": "reasoning_agent",
+    "model_family": "ChatGPT GPT-6",
+    "execution": "interactive_connected_github_session"
+  },
+  "created_on": "2026-10-10",
+  "state": "agent_reviewed_pending_serp_validation",
+  "sources": [
+    {
+      "kind": "project_keyword_registry",
+      "path": "projects/qserve/data/keywords.jsonl",
+      "blob_sha": "d227e23ceb4aa0c36693bd1534111ed7576b7b83"
+    },
+    {
+      "kind": "product_capabilities",
+      "repository": "addvaluewithai-hub/Qserve",
+      "path": "README.md",
+      "note": "React/Vite frontend prototype; demo-only actions and analytics, no production backend or subscription flow"
+    }
+  ],
+  "evaluation_principles": [
+    "Judge searcher intent semantically, not by mere lexical score.",
+    "Never claim observed autocomplete terms have measurable search volume.",
+    "A prototype should not advertise live waiter dispatch, payments, integrations, or pricing.",
+    "Preserve rejected terms as evidence of irrelevant directions.",
+    "All statuses are provisional until live SERP or customer evidence."
+  ],
+  "decision_vocabulary": {
+    "focus": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+    "support": "Consider educational or positioning content after live intent review.",
+    "investigate": "Inspect SERP and user intent; no publishing decision yet.",
+    "hold": "Do not target until product scope or business model supports the expectation.",
+    "exclude": "Do not target this query; retain observation for negative-learning context.",
+    "variant": "Merge to the canonical topic/page; do not create a duplicate URL.",
+    "competitor_watch": "Keep for optional competitor research; no targeting without justification."
+  },
+  "reviewed_keywords": [
+    {
+      "locale": "en-US",
+      "keyword": "best digital menu software for small restaurants",
+      "decision": "focus",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Strong operator-software alignment, but subscriptions/backend are not live.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "agent_hypothesis"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu",
+      "decision": "investigate",
+      "cluster": "broad-digital-menu",
+      "estimated_intent": "mixed",
+      "reason": "Ambiguous between QR menus, digital signage and PDFs; review real search results.",
+      "next_action": "Inspect SERP and user intent; no publishing decision yet.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu board for food truck",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "commercial",
+      "reason": "Food-truck display board is outside QServe's QR menu scope.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu board software",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "commercial",
+      "reason": "Electronic signage rather than table QR menus.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu boards",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "mixed",
+      "reason": "Looks for screen signage; not QServe's product.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu boards for restaurants",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "commercial",
+      "reason": "Digital display boards are not supported by QServe.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu display",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "mixed",
+      "reason": "Likely screen/display intent, not QR menu.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu for cafes",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Cafe operators are an exact audience; verify the SERP interpretation.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu for food truck",
+      "decision": "hold",
+      "cluster": "adjacent-food-truck",
+      "estimated_intent": "mixed",
+      "reason": "Potential fit but not the cafe/restaurant core; deprioritize.",
+      "next_action": "Do not target until product scope or business model supports the expectation.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu for restaurants",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Aligned with current digital menu demo; investigate signage ambiguity.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu screen",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "commercial",
+      "reason": "Hardware/display solution not part of QServe.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "digital menu signs",
+      "decision": "exclude",
+      "cluster": "digital-signage",
+      "estimated_intent": "commercial",
+      "reason": "Physical or digital signage, not scan-to-view menus.",
+      "next_action": "Do not target this query; retain observation for negative-learning context.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "qr code menu for restaurants",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Direct match for QR/table-aware menu demo.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "restaurant guest experience software",
+      "decision": "support",
+      "cluster": "guest-experience",
+      "estimated_intent": "commercial",
+      "reason": "Longer-term product positioning; don't suggest production-ready service delivery.",
+      "next_action": "Consider educational or positioning content after live intent review.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "en-US",
+      "keyword": "restaurant table service app",
+      "decision": "hold",
+      "cluster": "table-service",
+      "estimated_intent": "commercial",
+      "reason": "Live waiter notification/operational workflow does not exist yet.",
+      "next_action": "Do not target until product scope or business model supports the expectation.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "menu digital para restaurantes",
+      "decision": "variant",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Unaccented lexical variant; consolidate under accented canonical.",
+      "next_action": "Merge to the canonical topic/page; do not create a duplicate URL.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null,
+      "canonical": "menú digital para restaurantes"
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "menu digital para restaurantes qr",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Explicit QR and restaurant intent.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "menú digital para restaurantes",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Core restaurant digital menu query; canonical spelling.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "menú digital para restaurantes gratis",
+      "decision": "hold",
+      "cluster": "free-plans",
+      "estimated_intent": "commercial",
+      "reason": "QServe has not committed to a free tier.",
+      "next_action": "Do not target until product scope or business model supports the expectation.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "menú qr para cafeterías",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Cafe QR menu query aligns with product demo.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "precio de menú digital para restaurantes",
+      "decision": "investigate",
+      "cluster": "pricing",
+      "estimated_intent": "commercial",
+      "reason": "Pricing question is relevant but QServe has no published subscription price.",
+      "next_action": "Inspect SERP and user intent; no publishing decision yet.",
+      "evidence_sources": [
+        "agent_hypothesis"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "precio menu digital",
+      "decision": "investigate",
+      "cluster": "pricing",
+      "estimated_intent": "commercial",
+      "reason": "Broad pricing query; verify product interpretation.",
+      "next_action": "Inspect SERP and user intent; no publishing decision yet.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "sistema de menu digital para restaurantes",
+      "decision": "focus",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Relevant, but SERP may include POS/delivery systems absent from QServe.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "software para menus de restaurantes",
+      "decision": "variant",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Unaccented variant; consolidate with accented canonical.",
+      "next_action": "Merge to the canonical topic/page; do not create a duplicate URL.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null,
+      "canonical": "software para menús de restaurantes"
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "software para menús de restaurantes",
+      "decision": "focus",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Commercial restaurant menu software; verify product scope.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "beefood cardápio digital para delivery e restaurante",
+      "decision": "competitor_watch",
+      "cluster": "branded-competitor",
+      "estimated_intent": "navigational",
+      "reason": "Brand-specific delivery-oriented query; not generic acquisition content.",
+      "next_action": "Keep for optional competitor research; no targeting without justification.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "cardapio digital para restaurante gratuito",
+      "decision": "hold",
+      "cluster": "free-plans",
+      "estimated_intent": "commercial",
+      "reason": "Free tool intent; no verified free product tier.",
+      "next_action": "Do not target until product scope or business model supports the expectation.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "cardápio digital para restaurante",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Relevant but SERP may include delivery/order capabilities.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "google",
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "cardápio qr para cafeteria",
+      "decision": "focus",
+      "cluster": "qr-digital-menu",
+      "estimated_intent": "commercial",
+      "reason": "Direct cafe QR menu match.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "como fazer cardápio digital para restaurante",
+      "decision": "support",
+      "cluster": "educational-howto",
+      "estimated_intent": "informational",
+      "reason": "Useful tutorial topic with honest demo CTA.",
+      "next_action": "Consider educational or positioning content after live intent review.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "modelo de cardápio digital para restaurante",
+      "decision": "investigate",
+      "cluster": "template-search",
+      "estimated_intent": "informational",
+      "reason": "Likely seeks a template; target only if providing a useful original example.",
+      "next_action": "Inspect SERP and user intent; no publishing decision yet.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "sistema de cardápio digital para restaurantes",
+      "decision": "focus",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Relevant software/system phrase; avoid claiming online ordering or payments.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "agent_hypothesis"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "software cardapio digital",
+      "decision": "focus",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Commercial software term; keep grouped with accented forms.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "google"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "software de cardápio digital",
+      "decision": "focus",
+      "cluster": "digital-menu-software",
+      "estimated_intent": "commercial",
+      "reason": "Core software intent aligned with prototype positioning.",
+      "next_action": "Prioritize for live SERP validation and a truthful early-access/demo landing page.",
+      "evidence_sources": [
+        "seed"
+      ],
+      "serp_validated": false,
+      "monthly_volume": null,
+      "organic_difficulty": null
+    }
+  ]
+}

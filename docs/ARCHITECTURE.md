@@ -1,3 +1,7 @@
+# Architectural north star: Agent-led reasoning
+
+The **connected reasoning agent** provides semantic interpretation, intent analysis, clustering and SEO strategy. GitHub persists its documented decisions. The Python `brain.py` is only a mechanical **query frontier scheduler** and is **not** an AI brain; heuristic scores are triage hints, not final editorial approval. Read `agent/REASONING_PROTOCOL.md` and each `projects/<slug>/intelligence/status.json` before acting. No ChatGPT instance runs autonomously inside GitHub Actions without separate infrastructure.
+
 # Keywords Masna3 — Architecture & Research Integrity
 
 ## Design principles

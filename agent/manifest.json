@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "name": "Keywords Masna3",
   "interaction": "github-file-inbox-outbox",
   "repository": "addvaluewithai-hub/keywords-masna3",
@@ -67,7 +67,20 @@
     "keyword_difficulty": "unknown_until_verified",
     "ranking": "heuristic_not_empirical"
   },
-  "note": "All agents read next_actions.json, then submit bounded provider research if available. GitHub Actions executes jobs; results are authoritative.",
+  "note": "Read agent-authored intelligence decisions before mechanical score/frontier. Automatic ChatGPT runs require a separately connected runtime and are not provided by GitHub Actions alone.",
   "research_plan_glob": "projects/*/brain/next_actions.json",
-  "scheduler": ".github/workflows/research.yml"
+  "scheduler": ".github/workflows/research.yml",
+  "reasoning_layer": {
+    "core": "connected ChatGPT / reasoning agent in active session",
+    "entrypoint": "agent/REASONING_PROTOCOL.md",
+    "product_context_required": true,
+    "semantic_reviews_glob": "projects/*/intelligence/semantic-review-*.json",
+    "state_glob": "projects/*/intelligence/status.json",
+    "keyword_autopromotion_allowed": false
+  },
+  "mechanical_layer": {
+    "jobs_runner": ".github/workflows/agent-jobs.yml",
+    "query_planner": "masna3/brain.py",
+    "description": "Query frontier and heuristic scoring, NOT an LLM or editorial authority"
+  }
 }

@@ -2,17 +2,19 @@
 
 **A free-first, agent-only, evidence-based keyword intelligence factory for any niche.**
 
-One engine, separate research folders for each project. It discovers suggestions, tracks provenance, preserves historical runs, and creates explainable priority rankings. All core code uses **Python's standard library** (no paid SDK or API required to run seed-only research).
+The **thinking core is a connected AI agent (ChatGPT in an active session)**. GitHub is the source of truth for project memory, workflow requests and results; scripts handle mechanical collection only. One engine, separate research folders for each project. It discovers suggestions, tracks provenance, preserves historical runs, and creates explainable priority rankings. All core code uses **Python's standard library** (no paid SDK or API required to run seed-only research).
 
 > **Reality check:** Autocomplete suggestions are not monthly search volume. The research score is a heuristic, not verified search volume, SEO difficulty or ranking probability. The engine never invents those measurements.
 
 ## For AI agents (primary interface)
 
+**Start with [agent/REASONING_PROTOCOL.md](agent/REASONING_PROTOCOL.md).** The reasoning agent makes semantic SEO judgments itself and commits rationale to project intelligence files. Mechanical heuristic scores are never editorial approvals.
+
 **This is an agent-only system.** No operator dashboard and no manual workflows are required. Read [AGENTS.md](AGENTS.md) and the machine-readable [agent/manifest.json](agent/manifest.json) first.
 
 An agent interacts entirely through connected GitHub operations: create an immutable JSON request at jobs/requests/<job_id>.json; a push-triggered Action processes it; inspect jobs/results/<job_id>.json and the output under projects/<slug>/. Requests may either record labeled hypotheses or use configured suggestion providers. No request commit should be mistaken for completed research. All results persist for the next agent.
 
-## Autonomous research brain (v0.2)
+## Mechanical discovery planner (not the intelligence core)
 
 - Agent task type `plan`: no-network, no-key intelligence planning using existing research history.
 - Per-project `brain/next_actions.json`: evidence confidence, provider availability, next ranked research requests and reasons.
@@ -88,6 +90,6 @@ Never commit secrets or private customer data: this is a **public repository**. 
 
 ## Architecture and roadmap
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the schema, limitations and the next milestones (real SERP analysis, optional volume enrichment, trend evidence, semantic clustering, Search Console feedback, dashboard).
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for schemas and limitations. See each project's intelligence status for the actual reasoning-agent decisions and next actions; there is no dashboard requirement.
 
 **License:** not assigned yet. Public visibility alone is not an open-source license; repository owner should choose a license deliberately.

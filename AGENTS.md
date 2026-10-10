@@ -1,6 +1,6 @@
 # Keywords Masna3 — Agent Operating Contract v1
 
-This repository is for AI agents, not human operation. GitHub is the API, the database of record for research snapshots, and the asynchronous task transport. No dashboard is planned. No agent may claim a workflow completed without reading the result file.
+**Architecture correction:** ChatGPT/connected reasoning agents are the thinking layer. GitHub is persistent state, data and job orchestration; scripts are mechanical workers only. Read [agent/REASONING_PROTOCOL.md](agent/REASONING_PROTOCOL.md) first. This repository is for agents, not for a human dashboard.
 
 ## Entry points
 
@@ -18,7 +18,7 @@ This repository is for AI agents, not human operation. GitHub is the API, the da
 
 1. Read agent/manifest.json and the target project's configuration. Check project objective, supported locales and current product stage.
 2. Read its existing research artifacts if present. Missing artifacts are expected for a new project.
-3. Check projects/<slug>/brain/next_actions.json. Choose PLAN (refresh adaptive frontier), PROPOSE (unverified hypotheses), or RESEARCH (real suggestion providers). Research prioritization now reads historical yield; do not manually assume a higher heuristic score equals higher traffic.
+3. Read projects/<slug>/intelligence/status.json (when present) and treat agent-authored semantic reviews as the editorial decision layer. Check projects/<slug>/brain/next_actions.json only for mechanical next-query suggestions. Choose PLAN (refresh adaptive frontier), PROPOSE (unverified hypotheses), or RESEARCH (real suggestion providers). Research prioritization now reads historical yield; do not manually assume a higher heuristic score equals higher traffic.
 4. Submit one immutable JSON job on the main branch by creating jobs/requests/<job_id>.json through the connected GitHub file-creation tool.
 5. A push-triggered GitHub Action processes the inbox and commits jobs/results/<job_id>.json plus per-project artifacts.
 6. Do not assume that a request commit proves completion. Fetch jobs/results/<job_id>.json and inspect status. A missing file means queued or pending investigation.
@@ -34,7 +34,7 @@ This repository is for AI agents, not human operation. GitHub is the API, the da
       "project": "qserve"
     }
 
-PLAN performs **no network requests**, reads existing keywords and query histories, and writes projects/<slug>/brain/next_actions.json containing provider readiness, locale coverage and an explainable ranked frontier. The planner counts validated suggestion evidence separately from agent hypotheses. Agents should review ready queries and then submit bounded RESEARCH jobs only for permitted sources. If no provider is available, report blocked; do not fake new external discoveries. A twice-weekly GitHub Action also refreshes plans for all configured projects, and performs Brave discovery only when an API key exists.
+PLAN performs **no network requests**, reads existing keywords and query histories, and writes projects/<slug>/brain/next_actions.json containing provider readiness, locale coverage and an explainable ranked frontier. The planner counts suggestion evidence separately from agent hypotheses, but does **not** understand semantic meaning, searcher intent or product fit; a reasoning agent must make and record these decisions. Agents should review ready queries and then submit bounded RESEARCH jobs only for permitted sources. If no provider is available, report blocked; do not fake new external discoveries. A twice-weekly GitHub Action also refreshes plans for all configured projects, and performs Brave discovery only when an API key exists.
 
 ## Request: PROPOSE (zero API cost)
 

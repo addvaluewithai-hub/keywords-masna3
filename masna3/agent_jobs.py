@@ -63,7 +63,7 @@ def _validate(job: Any, filename_id: str) -> dict:
         unofficial = job.get("allow_unofficial", False)
         if type(unofficial) is not bool:
             raise JobError("allow_unofficial must be a boolean")
-        if not unofficial and any(p in {"google", "duckduckgo"} for p in providers):
+        if kind == "research" and not unofficial and any(p in {"google", "duckduckgo"} for p in providers):
             raise JobError("Unofficial providers need explicit allow_unofficial=true")
         job["providers"] = providers
         job["per_locale"] = limit
@@ -80,7 +80,7 @@ def _validate(job: Any, filename_id: str) -> dict:
             _required_text(proposal["keyword"], "keyword")
             _required_text(proposal["reason"], "reason", 500)
     else:
-        raise JobError("kind must be research or propose")
+        raise JobError("kind must be plan, research or propose")
     return job
 
 
@@ -164,9 +164,11 @@ def process_jobs(root: Path, max_jobs: int = 10) -> list[dict]:
                 "summary": summary,
                 "artifacts": {
                     "keywords": f"projects/{project}/data/keywords.jsonl",
-                    "ranking": f"projects/{project}/opportunities/latest.csv",
-                    "report": f"projects/{project}/reports/latest.md",
                     "next_actions": f"projects/{project}/brain/next_actions.json",
+                    **({} if kind == "plan" else {
+                        "ranking": f"projects/{project}/opportunities/latest.csv",
+                        "report": f"projects/{project}/reports/latest.md",
+                    }),
                 },
             }
         except (ValueError, OSError, json.JSONDecodeError, TypeError, KeyError) as exc:

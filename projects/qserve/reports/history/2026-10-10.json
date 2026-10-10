@@ -1,12 +1,11 @@
 {
   "date": "2026-10-10",
-  "known_keywords": 15,
-  "new_keywords": 2,
+  "known_keywords": 23,
+  "new_keywords": 8,
   "notices": [],
   "project": "qserve",
   "requests": 6,
   "sources": [
-    "google",
-    "duckduckgo"
+    "google"
   ]
 }

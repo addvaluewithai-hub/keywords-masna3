@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T17:29:43+00:00",
+  "generated_at": "2026-10-10T17:31:50+00:00",
   "integrity": {
     "agent_proposals_mean": "unverified hypotheses, not search demand",
     "keyword_difficulty": null,
@@ -101,22 +101,9 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "restaurant table service app",
+              "priority": 74,
+              "query": "digital menu for cafes",
               "reasons": [
-                "buying_signal",
-                "unverified_research_candidate",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": []
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 81,
-              "query": "best digital menu software for small restaurants",
-              "reasons": [
-                "buying_signal",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -126,7 +113,7 @@
               "previous_novel": null,
               "previous_results": null,
               "priority": 74,
-              "query": "digital menu for cafes",
+              "query": "qr code menu for restaurants",
               "reasons": [
                 "unverified_research_candidate",
                 "first_query_for_provider"
@@ -143,7 +130,7 @@
     },
     {
       "country": "MX",
-      "known_keywords": 5,
+      "known_keywords": 9,
       "language": "es",
       "locale": "es-MX",
       "providers": {
@@ -178,14 +165,16 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 77,
-              "query": "precio de menú digital para restaurantes",
+              "priority": 79,
+              "query": "sistema de menu digital para restaurantes",
               "reasons": [
                 "buying_signal",
-                "unverified_research_candidate",
+                "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
-              "verified_suggestion_sources": []
+              "verified_suggestion_sources": [
+                "google"
+              ]
             }
           ],
           "reason": "BRAVE_API_KEY not configured",
@@ -210,37 +199,8 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 77,
-              "query": "precio de menú digital para restaurantes",
-              "reasons": [
-                "buying_signal",
-                "unverified_research_candidate",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": []
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 74,
-              "query": "menú digital para restaurantes",
-              "reasons": [
-                "unverified_research_candidate",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": []
-            }
-          ],
-          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
-          "status": "blocked"
-        },
-        "google": {
-          "next_queries": [
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 82,
-              "query": "software para menus de restaurantes",
+              "priority": 79,
+              "query": "sistema de menu digital para restaurantes",
               "reasons": [
                 "buying_signal",
                 "observed_in_suggestion_source",
@@ -254,14 +214,21 @@
               "previous_novel": null,
               "previous_results": null,
               "priority": 77,
-              "query": "precio de menú digital para restaurantes",
+              "query": "menú digital para restaurantes gratis",
               "reasons": [
-                "buying_signal",
-                "unverified_research_candidate",
+                "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
-              "verified_suggestion_sources": []
-            },
+              "verified_suggestion_sources": [
+                "google"
+              ]
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        },
+        "google": {
+          "next_queries": [
             {
               "previous_novel": null,
               "previous_results": null,
@@ -272,18 +239,43 @@
                 "first_query_for_provider"
               ],
               "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "menú qr para cafeterías",
+              "reasons": [
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "sistema de menu digital para restaurantes",
+              "reasons": [
+                "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
             }
           ],
           "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
           "status": "blocked"
         }
       },
-      "with_suggestion_evidence": 1,
+      "with_suggestion_evidence": 5,
       "without_suggestion_evidence": 4
     },
     {
       "country": "BR",
-      "known_keywords": 5,
+      "known_keywords": 9,
       "language": "pt",
       "locale": "pt-BR",
       "providers": {
@@ -304,10 +296,9 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 78,
-              "query": "software cardapio digital",
+              "priority": 84,
+              "query": "cardápio digital para restaurante",
               "reasons": [
-                "buying_signal",
                 "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
@@ -318,13 +309,16 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 74,
-              "query": "cardápio digital para restaurante",
+              "priority": 78,
+              "query": "software cardapio digital",
               "reasons": [
-                "unverified_research_candidate",
+                "buying_signal",
+                "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
-              "verified_suggestion_sources": []
+              "verified_suggestion_sources": [
+                "google"
+              ]
             }
           ],
           "reason": "BRAVE_API_KEY not configured",
@@ -335,10 +329,9 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 78,
-              "query": "software cardapio digital",
+              "priority": 84,
+              "query": "cardápio digital para restaurante",
               "reasons": [
-                "buying_signal",
                 "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
@@ -349,13 +342,16 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 74,
-              "query": "cardápio digital para restaurante",
+              "priority": 78,
+              "query": "software cardapio digital",
               "reasons": [
-                "unverified_research_candidate",
+                "buying_signal",
+                "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
-              "verified_suggestion_sources": []
+              "verified_suggestion_sources": [
+                "google"
+              ]
             },
             {
               "previous_novel": null,
@@ -377,32 +373,35 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 74,
-              "query": "cardápio digital para restaurante",
-              "reasons": [
-                "unverified_research_candidate",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": []
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 74,
-              "query": "cardápio qr para cafeteria",
-              "reasons": [
-                "unverified_research_candidate",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": []
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
               "priority": 73,
               "query": "software cardapio digital",
               "reasons": [
                 "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 69,
+              "query": "sistema de cardápio digital para restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 68,
+              "query": "como fazer cardápio digital para restaurante",
+              "reasons": [
                 "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
@@ -415,12 +414,13 @@
           "status": "blocked"
         }
       },
-      "with_suggestion_evidence": 1,
-      "without_suggestion_evidence": 4
+      "with_suggestion_evidence": 6,
+      "without_suggestion_evidence": 3
     }
   ],
   "next_action": "configure_available_source_or_wait_for_refresh",
   "objective": "Get qualified restaurant and cafe operators to request early access",
+  "preferred_ready_provider": null,
   "project": "qserve",
   "ready_queries": 0,
   "schema_version": 1,
@@ -429,19 +429,31 @@
       "blocker": "BRAVE_API_KEY not configured",
       "historical_new_keywords": 0,
       "historical_requests": 0,
-      "ready": false
+      "ready": false,
+      "recorded_novel_events": 0,
+      "recorded_novel_per_request": null,
+      "recorded_request_events": 0,
+      "sample_size_warning": "insufficient_requests"
     },
     "duckduckgo": {
       "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
       "historical_new_keywords": 0,
       "historical_requests": 3,
-      "ready": false
+      "ready": false,
+      "recorded_novel_events": 0,
+      "recorded_novel_per_request": null,
+      "recorded_request_events": 0,
+      "sample_size_warning": "insufficient_requests"
     },
     "google": {
       "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
-      "historical_new_keywords": 2,
-      "historical_requests": 3,
-      "ready": false
+      "historical_new_keywords": 10,
+      "historical_requests": 9,
+      "ready": false,
+      "recorded_novel_events": 8,
+      "recorded_novel_per_request": 1.333,
+      "recorded_request_events": 6,
+      "sample_size_warning": "insufficient_requests"
     }
   },
   "stage": "frontend prototype — no live backend, service fulfillment or subscriptions",

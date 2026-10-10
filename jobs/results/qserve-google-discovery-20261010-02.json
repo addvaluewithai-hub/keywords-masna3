@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "keywords": "projects/qserve/data/keywords.jsonl",
+    "next_actions": "projects/qserve/brain/next_actions.json",
+    "ranking": "projects/qserve/opportunities/latest.csv",
+    "report": "projects/qserve/reports/latest.md"
+  },
+  "finished_at": "2026-10-10T17:31:50+00:00",
+  "job_id": "qserve-google-discovery-20261010-02",
+  "kind": "research",
+  "project": "qserve",
+  "request_sha256": "a31c6485335aaca3fa770f8fdf646d580ddd1e98ce27d711a315c1d78d778551",
+  "status": "completed",
+  "summary": {
+    "date": "2026-10-10",
+    "new": 8,
+    "notices": [],
+    "project": "qserve",
+    "requests": 6,
+    "sources": [
+      "google"
+    ],
+    "total": 23
+  },
+  "version": 1
+}

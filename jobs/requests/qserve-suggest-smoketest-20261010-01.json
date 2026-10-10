@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "job_id": "qserve-suggest-smoketest-20261010-01",
+  "kind": "research",
+  "project": "qserve",
+  "providers": [
+    "google",
+    "duckduckgo"
+  ],
+  "per_locale": 1,
+  "allow_unofficial": true
+}

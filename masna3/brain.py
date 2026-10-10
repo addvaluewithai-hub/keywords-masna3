@@ -94,9 +94,19 @@ def make_plan(folder: Path, config: dict, store: Store,
     provider_states = {}
     for provider in providers:
         enabled, reason = available(provider, allow_unofficial)
+        past = store.db.execute(
+            "SELECT COUNT(*) AS n, COALESCE(SUM(novel), 0) AS new FROM query_events WHERE provider=?",
+            (provider,),
+        ).fetchone()
         provider_states[provider] = {
             "ready": enabled,
             "blocker": None if enabled else reason,
+            "recorded_request_events": past["n"],
+            "recorded_novel_events": past["new"],
+            "recorded_novel_per_request": (
+                round(past["new"] / past["n"], 3) if past["n"] else None
+            ),
+            "sample_size_warning": "insufficient_requests" if past["n"] < 10 else None,
             "historical_requests": store.db.execute(
                 "SELECT COUNT(*) FROM queries WHERE provider=?", (provider,)
             ).fetchone()[0],
@@ -133,6 +143,15 @@ def make_plan(folder: Path, config: dict, store: Store,
             if ready:
                 total_ready += len(candidates)
         markets.append(lane)
+    # A source that yielded more novel queries is interesting to explore again,
+    # but small samples are not treated as evidence of keyword market demand.
+    ready_providers = [p for p in providers if provider_states[p]["ready"]]
+    ready_providers.sort(key=lambda p: (
+        -provider_states[p]["recorded_novel_per_request"]
+        if provider_states[p]["recorded_novel_per_request"] is not None else 0,
+        -provider_states[p]["recorded_request_events"],
+        p,
+    ))
     plan = {
         "schema_version": 1, "project": config["slug"],
         "generated_at": now or utc_now(),
@@ -140,6 +159,7 @@ def make_plan(folder: Path, config: dict, store: Store,
         "stage": config.get("stage", ""),
         "strategy": "ranked_discovery_frontier",
         "source_status": provider_states,
+        "preferred_ready_provider": ready_providers[0] if ready_providers else None,
         "markets": markets,
         "ready_queries": total_ready,
         "integrity": {
@@ -187,5 +207,8 @@ def plan_project(root: Path, project: str, providers: list[str] | None = None,
 def plan_all(root: Path) -> list[dict]:
     results = []
     for config in sorted((root / "projects").glob("*/project.json")):
+        settings = json.loads(config.read_text(encoding="utf-8"))
+        if settings.get("enabled", True) is False:
+            continue
         results.append(plan_project(root, config.parent.name))
     return results

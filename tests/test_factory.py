@@ -32,6 +32,15 @@ class FactoryTests(unittest.TestCase):
             first.export()
             second = Store(folder)
             self.assertEqual(len(second.keywords()), 2)
+            events = [json.loads(line) for line in
+                      (folder / "data/query_events.jsonl").read_text().splitlines()]
+            self.assertEqual(len(events), 1)
+            self.assertEqual(events[0]["novel"], 1)
+            second.record_query("es-MX", "brave", "menú digital", 4, 0,
+                                now="2026-10-02T00:00:00+00:00")
+            second.export()
+            third = Store(folder)
+            self.assertEqual(third.db.execute("SELECT COUNT(*) FROM query_events").fetchone()[0], 2)
             choices = second.candidates(
                 "es-MX", ["menú digital"], "brave", 4, 21,
                 now="2026-10-02T00:00:00+00:00",

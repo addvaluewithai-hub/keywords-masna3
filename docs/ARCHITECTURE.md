@@ -32,6 +32,10 @@ Each line is an object with:
 
 The `seed` provider represents an unverified researcher hypothesis. Locale plus normalized phrase is the uniqueness key. Language-aware morphological clustering is **not** implemented yet; normalization does not equate translations or synonyms.
 
+### Append-only observation audit
+
+Every successful suggestion request also appends an event into data/query_events.jsonl with provider, locale, query, timestamp, result count and new-keyword count. Historical data predating this schema is not invented or backfilled. The existing queries.jsonl remains the last-attempt frontier. The planner reports event counts separately, and warns when a source has fewer than ten observations.
+
 ### Query frontier (`data/queries.jsonl`)
 
 Each line tracks `locale`, `provider`, `normalized`, `phrase`, `last_run`, `results`, and `novel`. Previously run queries must age past the refresh window. Novel suggestions become candidates on later runs, so the research space expands over time.

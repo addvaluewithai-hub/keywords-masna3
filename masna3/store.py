@@ -53,6 +53,15 @@ class Store:
                 novel INTEGER NOT NULL,
                 PRIMARY KEY (locale, provider, normalized)
             );
+            CREATE TABLE query_events (
+                seq INTEGER PRIMARY KEY AUTOINCREMENT,
+                locale TEXT NOT NULL,
+                provider TEXT NOT NULL,
+                phrase TEXT NOT NULL,
+                run_at TEXT NOT NULL,
+                results INTEGER NOT NULL,
+                novel INTEGER NOT NULL
+            );
             """
         )
         self._restore()
@@ -84,6 +93,17 @@ class Store:
                         row["locale"], row["provider"], row["normalized"], row["phrase"],
                         row["last_run"], row["results"], row["novel"],
                     ),
+                )
+        event_path = self.folder / "data" / "query_events.jsonl"
+        if event_path.exists():
+            for line in event_path.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                event = json.loads(line)
+                self.db.execute(
+                    "INSERT INTO query_events(locale, provider, phrase, run_at, results, novel) VALUES (?, ?, ?, ?, ?, ?)",
+                    (event["locale"], event["provider"], event["phrase"],
+                     event["run_at"], event["results"], event["novel"]),
                 )
         self.db.commit()
 
@@ -169,12 +189,17 @@ class Store:
 
     def record_query(self, locale: str, provider: str, phrase: str,
                      results: int, novel: int, now: str | None = None) -> None:
+        now = now or utc_now()
+        self.db.execute(
+            "INSERT INTO query_events(locale, provider, phrase, run_at, results, novel) VALUES (?, ?, ?, ?, ?, ?)",
+            (locale, provider, phrase, now, results, novel),
+        )
         self.db.execute(
             """INSERT INTO queries VALUES (?, ?, ?, ?, ?, ?, ?)
                ON CONFLICT(locale, provider, normalized) DO UPDATE SET
                phrase=excluded.phrase, last_run=excluded.last_run,
                results=excluded.results, novel=excluded.novel""",
-            (locale, provider, normalize(phrase), phrase, now or utc_now(), results, novel),
+            (locale, provider, normalize(phrase), phrase, now, results, novel),
         )
         self.db.commit()
 
@@ -189,3 +214,11 @@ class Store:
                               for row in query_rows)
         write_if_changed(self.folder / "data" / "keywords.jsonl", kw_lines)
         write_if_changed(self.folder / "data" / "queries.jsonl", query_lines)
+        event_rows = self.db.execute(
+            "SELECT locale, provider, phrase, run_at, results, novel FROM query_events ORDER BY seq"
+        ).fetchall()
+        event_lines = "".join(
+            json.dumps(dict(row), ensure_ascii=False, sort_keys=True) + "\n"
+            for row in event_rows
+        )
+        write_if_changed(self.folder / "data" / "query_events.jsonl", event_lines)

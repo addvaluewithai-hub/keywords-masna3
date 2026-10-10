@@ -30,7 +30,9 @@ def main() -> int:
     args = parser.parse_args()
     if args.command == "projects":
         for path in sorted((root / "projects").glob("*/project.json")):
-            print(path.parent.name)
+            config = json.loads(path.read_text(encoding="utf-8"))
+            if config.get("enabled", True) is not False:
+                print(path.parent.name)
         return 0
     if args.command == "process-jobs":
         print(json.dumps(process_jobs(root), ensure_ascii=False, indent=2))

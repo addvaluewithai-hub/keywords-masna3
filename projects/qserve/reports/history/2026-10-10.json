@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "known_keywords": 13,
+  "new_keywords": 13,
+  "notices": [
+    "Agent proposals are research hypotheses, NOT independent evidence of search demand."
+  ],
+  "project": "qserve",
+  "requests": 0,
+  "sources": [
+    "agent_hypothesis"
+  ]
+}

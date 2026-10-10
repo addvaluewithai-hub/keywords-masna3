@@ -1,0 +1,28 @@
+{
+  "artifacts": {
+    "keywords": "projects/qserve/data/keywords.jsonl",
+    "ranking": "projects/qserve/opportunities/latest.csv",
+    "report": "projects/qserve/reports/latest.md"
+  },
+  "finished_at": "2026-10-10T16:43:40+00:00",
+  "job_id": "qserve-agent-demo-20261010-01",
+  "kind": "propose",
+  "project": "qserve",
+  "request_sha256": "4337d24d40078627fa57b074c78e8573ea3e674e6f8a7b1a09ebe59e0f2eb094",
+  "status": "completed_with_notices",
+  "summary": {
+    "date": "2026-10-10",
+    "new": 13,
+    "notices": [
+      "Agent proposals are research hypotheses, NOT independent evidence of search demand."
+    ],
+    "project": "qserve",
+    "proposed_new": 3,
+    "requests": 0,
+    "sources": [
+      "agent_hypothesis"
+    ],
+    "total": 13
+  },
+  "version": 1
+}

@@ -1,0 +1,42 @@
+name: Agent Job Inbox
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'jobs/requests/*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-main
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Process agent inbox
+        env:
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+        run: python -m masna3 process-jobs
+      - name: Commit machine-readable results
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- projects/ jobs/results/
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: process agent research requests'
+            git push
+          else
+            echo 'No new results.'
+          fi

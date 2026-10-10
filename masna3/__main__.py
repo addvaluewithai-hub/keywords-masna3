@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 from .engine import config_for, run_project
+from .agent_jobs import process_jobs
 
 
 def main() -> int:
@@ -24,10 +25,14 @@ def main() -> int:
     run.add_argument("--per-locale", type=int, default=4)
     run.add_argument("--refresh-days", type=int, default=21)
     listing = sub.add_parser("projects", help="List configured projects")
+    sub.add_parser("process-jobs", help="Internal GitHub Actions agent worker")
     args = parser.parse_args()
     if args.command == "projects":
         for path in sorted((root / "projects").glob("*/project.json")):
             print(path.parent.name)
+        return 0
+    if args.command == "process-jobs":
+        print(json.dumps(process_jobs(root), ensure_ascii=False, indent=2))
         return 0
     try:
         config_for(root, args.project)

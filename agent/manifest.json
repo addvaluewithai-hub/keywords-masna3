@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "name": "Keywords Masna3",
+  "interaction": "github-file-inbox-outbox",
+  "repository": "addvaluewithai-hub/keywords-masna3",
+  "branch": "main",
+  "instructions": "AGENTS.md",
+  "requests_glob": "jobs/requests/*.json",
+  "results_glob": "jobs/results/*.json",
+  "job_id_pattern": "^[a-z0-9][a-z0-9-]{5,63}$",
+  "action_trigger": "push_to_main_jobs_requests",
+  "runner": ".github/workflows/agent-jobs.yml",
+  "capabilities": [
+    {
+      "kind": "propose",
+      "description": "Record agent keyword hypotheses, not proof of demand",
+      "required": [
+        "version",
+        "job_id",
+        "kind",
+        "project",
+        "proposals"
+      ]
+    },
+    {
+      "kind": "research",
+      "description": "Use configured suggestion providers with bounded budgets",
+      "required": [
+        "version",
+        "job_id",
+        "kind",
+        "project",
+        "providers"
+      ],
+      "optional": [
+        "per_locale",
+        "allow_unofficial"
+      ]
+    }
+  ],
+  "results": {
+    "statuses": [
+      "completed",
+      "completed_with_notices",
+      "failed"
+    ],
+    "artifacts": "project-scoped outputs"
+  },
+  "projects_glob": "projects/*/project.json",
+  "measurements": {
+    "monthly_search_volume": "unknown_until_verified",
+    "keyword_difficulty": "unknown_until_verified",
+    "ranking": "heuristic_not_empirical"
+  },
+  "note": "Submission is asynchronous on GitHub Actions. Never report completion until the results file exists."
+}

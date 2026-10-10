@@ -42,7 +42,7 @@ def evaluate(row: dict, locale_config: dict) -> dict:
     commercial_signals = [normalize(s) for s in locale_config.get("buying_signals", [])]
     matched = [s for s in commercial_signals if s in keyword]
     intent = min(100, 20 + 40 * len(matched))
-    independent = len(set(row["evidence"]) - {"seed"})
+    independent = len(set(row["evidence"]) - {"seed", "agent_hypothesis"})
     evidence_strength = min(100, 25 * independent)
     score = round(0.50 * relevance + 0.35 * intent + 0.15 * evidence_strength)
     negative = [normalize(s) for s in locale_config.get("exclude_signals", [])]

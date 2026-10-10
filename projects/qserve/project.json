@@ -1,0 +1,76 @@
+{
+  "slug": "qserve",
+  "name": "QServe — Restaurant Guest Experience",
+  "niche": "restaurant digital experience software",
+  "website": "",
+  "objective": "Get qualified restaurant and cafe operators to request early access",
+  "stage": "frontend prototype — no live backend, service fulfillment or subscriptions",
+  "locales": [
+    {
+      "code": "en-US",
+      "language": "en",
+      "country": "US",
+      "seeds": [
+        "qr code menu for restaurants",
+        "digital menu for cafes",
+        "restaurant table service app",
+        "restaurant guest experience software"
+      ],
+      "buying_signals": [
+        "software",
+        "pricing",
+        "best",
+        "app",
+        "platform",
+        "cost"
+      ],
+      "exclude_signals": [
+        "jobs",
+        "salary",
+        "torrent"
+      ]
+    },
+    {
+      "code": "es-MX",
+      "language": "es",
+      "country": "MX",
+      "seeds": [
+        "menú digital para restaurantes",
+        "menú qr para cafeterías",
+        "software para menús de restaurantes"
+      ],
+      "buying_signals": [
+        "software",
+        "precio",
+        "mejor",
+        "sistema",
+        "costo"
+      ],
+      "exclude_signals": [
+        "empleos",
+        "trabajo"
+      ]
+    },
+    {
+      "code": "pt-BR",
+      "language": "pt",
+      "country": "BR",
+      "seeds": [
+        "cardápio digital para restaurante",
+        "cardápio qr para cafeteria",
+        "software de cardápio digital"
+      ],
+      "buying_signals": [
+        "software",
+        "preço",
+        "melhor",
+        "sistema",
+        "custo"
+      ],
+      "exclude_signals": [
+        "emprego",
+        "vaga"
+      ]
+    }
+  ]
+}

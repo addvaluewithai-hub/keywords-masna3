@@ -1,0 +1,32 @@
+{
+  "slug": "sample-fitness",
+  "name": "Sample Fitness Studio Software",
+  "niche": "fitness studio booking software",
+  "website": "",
+  "objective": "Example second niche showing project isolation",
+  "stage": "sample project (not an active business)",
+  "locales": [
+    {
+      "code": "en-US",
+      "language": "en",
+      "country": "US",
+      "seeds": [
+        "fitness studio booking software",
+        "gym class scheduling app",
+        "yoga studio booking system"
+      ],
+      "buying_signals": [
+        "software",
+        "pricing",
+        "best",
+        "system",
+        "app",
+        "cost"
+      ],
+      "exclude_signals": [
+        "jobs",
+        "salary"
+      ]
+    }
+  ]
+}

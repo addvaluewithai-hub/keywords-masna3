@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "name": "Keywords Masna3",
   "interaction": "github-file-inbox-outbox",
   "repository": "addvaluewithai-hub/keywords-masna3",
@@ -11,6 +11,21 @@
   "action_trigger": "push_to_main_jobs_requests",
   "runner": ".github/workflows/agent-jobs.yml",
   "capabilities": [
+    {
+      "kind": "plan",
+      "description": "Generate no-network adaptive provider and query research plan from project history",
+      "required": [
+        "version",
+        "job_id",
+        "kind",
+        "project"
+      ],
+      "optional": [
+        "providers",
+        "per_locale",
+        "allow_unofficial"
+      ]
+    },
     {
       "kind": "propose",
       "description": "Record agent keyword hypotheses, not proof of demand",
@@ -52,5 +67,7 @@
     "keyword_difficulty": "unknown_until_verified",
     "ranking": "heuristic_not_empirical"
   },
-  "note": "Submission is asynchronous on GitHub Actions. Never report completion until the results file exists."
+  "note": "All agents read next_actions.json, then submit bounded provider research if available. GitHub Actions executes jobs; results are authoritative.",
+  "research_plan_glob": "projects/*/brain/next_actions.json",
+  "scheduler": ".github/workflows/research.yml"
 }

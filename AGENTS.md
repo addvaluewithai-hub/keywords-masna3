@@ -9,6 +9,7 @@ This repository is for AI agents, not human operation. GitHub is the API, the da
 - Prior knowledge: projects/<slug>/data/keywords.jsonl
 - Latest ranking: projects/<slug>/opportunities/latest.csv
 - Latest report: projects/<slug>/reports/latest.md
+- Adaptive plan: projects/<slug>/brain/next_actions.json
 - Inbox: jobs/requests/<job_id>.json
 - Outbox: jobs/results/<job_id>.json
 - Executor: .github/workflows/agent-jobs.yml
@@ -17,12 +18,23 @@ This repository is for AI agents, not human operation. GitHub is the API, the da
 
 1. Read agent/manifest.json and the target project's configuration. Check project objective, supported locales and current product stage.
 2. Read its existing research artifacts if present. Missing artifacts are expected for a new project.
-3. Choose either PROPOSE (unverified keyword hypotheses) or RESEARCH (real suggestion providers).
+3. Check projects/<slug>/brain/next_actions.json. Choose PLAN (refresh adaptive frontier), PROPOSE (unverified hypotheses), or RESEARCH (real suggestion providers). Research prioritization now reads historical yield; do not manually assume a higher heuristic score equals higher traffic.
 4. Submit one immutable JSON job on the main branch by creating jobs/requests/<job_id>.json through the connected GitHub file-creation tool.
 5. A push-triggered GitHub Action processes the inbox and commits jobs/results/<job_id>.json plus per-project artifacts.
 6. Do not assume that a request commit proves completion. Fetch jobs/results/<job_id>.json and inspect status. A missing file means queued or pending investigation.
 7. Read the artifact paths given by the result. Only describe measured results and documented evidence.
 8. Subsequent agents resume by reading GitHub state; conversation history is never the source of truth.
+
+## Request: PLAN (the free research brain)
+
+    {
+      "version": 1,
+      "job_id": "qserve-plan-20261010-01",
+      "kind": "plan",
+      "project": "qserve"
+    }
+
+PLAN performs **no network requests**, reads existing keywords and query histories, and writes projects/<slug>/brain/next_actions.json containing provider readiness, locale coverage and an explainable ranked frontier. The planner counts validated suggestion evidence separately from agent hypotheses. Agents should review ready queries and then submit bounded RESEARCH jobs only for permitted sources. If no provider is available, report blocked; do not fake new external discoveries. A twice-weekly GitHub Action also refreshes plans for all configured projects, and performs Brave discovery only when an API key exists.
 
 ## Request: PROPOSE (zero API cost)
 
@@ -54,7 +66,7 @@ Each proposal needs exactly locale, keyword, reason. Between 1 and 50 hypotheses
       "allow_unofficial": false
     }
 
-Providers supported: brave (optional BRAVE_API_KEY GitHub Actions secret), google and duckduckgo (unofficial sources, explicit allow_unofficial=true required). Each job supports at most 5 queries per locale per provider. Never bypass rate limits, payment requirements, bot protections or provider access restrictions. Missing provider access produces a notice; do not claim the API worked.
+PLAN and RESEARCH can use an optional providers list; PLAN defaults to evaluating brave/google/duckduckgo without requesting them. Providers supported: brave (optional BRAVE_API_KEY GitHub Actions secret), google and duckduckgo (unofficial sources, explicit allow_unofficial=true required). Each job supports at most 5 queries per locale per provider. Never bypass rate limits, payment requirements, bot protections or provider access restrictions. Missing provider access produces a notice; do not claim the API worked.
 
 ## ID / result contract
 

@@ -45,12 +45,12 @@ def _validate(job: Any, filename_id: str) -> dict:
         raise JobError("job_id must match the immutable request filename (6-64 slug characters)")
     job["project"] = _required_text(job.get("project"), "project", 64)
     kind = job.get("kind")
-    if kind == "research":
+    if kind in {"research", "plan"}:
         _keys(job, {
             "version", "job_id", "kind", "project", "providers",
             "per_locale", "allow_unofficial",
         })
-        providers = job.get("providers", [])
+        providers = job.get("providers", ["brave", "google", "duckduckgo"] if kind == "plan" else [])
         if not isinstance(providers, list) or len(providers) > 3:
             raise JobError("providers must be an array with up to 3 entries")
         if any(not isinstance(p, str) or p not in PROVIDERS for p in providers):
@@ -113,6 +113,8 @@ def _propose(root: Path, job: dict) -> dict:
         "proposed_new": proposal_additions, "total": len(store.keywords()),
     }
     export_reports(folder, config, store, result)
+    from .brain import make_plan
+    make_plan(folder, config, store)
     return result
 
 
@@ -145,6 +147,13 @@ def process_jobs(root: Path, max_jobs: int = 10) -> list[dict]:
                     per_locale=job["per_locale"],
                     allow_unofficial=job["allow_unofficial"],
                 )
+            elif kind == "plan":
+                from .brain import plan_project
+                summary = plan_project(
+                    root, project, providers=job["providers"],
+                    allow_unofficial=job["allow_unofficial"],
+                    per_locale=job["per_locale"],
+                )
             else:
                 summary = _propose(root, job)
             result = {
@@ -157,6 +166,7 @@ def process_jobs(root: Path, max_jobs: int = 10) -> list[dict]:
                     "keywords": f"projects/{project}/data/keywords.jsonl",
                     "ranking": f"projects/{project}/opportunities/latest.csv",
                     "report": f"projects/{project}/reports/latest.md",
+                    "next_actions": f"projects/{project}/brain/next_actions.json",
                 },
             }
         except (ValueError, OSError, json.JSONDecodeError, TypeError, KeyError) as exc:

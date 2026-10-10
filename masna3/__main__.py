@@ -26,6 +26,7 @@ def main() -> int:
     run.add_argument("--refresh-days", type=int, default=21)
     listing = sub.add_parser("projects", help="List configured projects")
     sub.add_parser("process-jobs", help="Internal GitHub Actions agent worker")
+    sub.add_parser("plan-all", help="Internal agent planner for all projects")
     args = parser.parse_args()
     if args.command == "projects":
         for path in sorted((root / "projects").glob("*/project.json")):
@@ -33,6 +34,10 @@ def main() -> int:
         return 0
     if args.command == "process-jobs":
         print(json.dumps(process_jobs(root), ensure_ascii=False, indent=2))
+        return 0
+    if args.command == "plan-all":
+        from .brain import plan_all
+        print(json.dumps(plan_all(root), ensure_ascii=False, indent=2))
         return 0
     try:
         config_for(root, args.project)

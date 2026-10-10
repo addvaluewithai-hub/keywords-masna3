@@ -1,6 +1,6 @@
 # Keywords Masna3 🏭
 
-**A free-first, evidence-based keyword intelligence factory for any niche.**
+**A free-first, agent-only, evidence-based keyword intelligence factory for any niche.**
 
 One engine, separate research folders for each project. It discovers suggestions, tracks provenance, preserves historical runs, and creates explainable priority rankings. All core code uses **Python's standard library** (no paid SDK or API required to run seed-only research).
 
@@ -12,7 +12,15 @@ One engine, separate research folders for each project. It discovers suggestions
 
 An agent interacts entirely through connected GitHub operations: create an immutable JSON request at jobs/requests/<job_id>.json; a push-triggered Action processes it; inspect jobs/results/<job_id>.json and the output under projects/<slug>/. Requests may either record labeled hypotheses or use configured suggestion providers. No request commit should be mistaken for completed research. All results persist for the next agent.
 
-## Current capabilities (v0.1)
+## Autonomous research brain (v0.2)
+
+- Agent task type `plan`: no-network, no-key intelligence planning using existing research history.
+- Per-project `brain/next_actions.json`: evidence confidence, provider availability, next ranked research requests and reasons.
+- Live discovery uses the same adaptive frontier, giving fresh, commercial and independently observed queries priority over repeatedly unproductive queries.
+- Scheduled planner refreshes every configured niche twice weekly. Real Brave requests run only when the optional API key exists; blocked providers are never disguised as completed research.
+- Plans distinguish hypotheses (seeds or AI proposals) from actual suggestion source observations. Neither represents verified Google search volume.
+
+
 
 - Per-project configuration in `projects/<slug>/project.json`; multiple markets and languages per project.
 - Google and DuckDuckGo suggestions (**unofficial; disabled unless explicitly opted in**).
@@ -48,6 +56,7 @@ python -m masna3 run --project qserve --providers google,duckduckgo --allow-unof
 ```
 
 Results go inside each project's folder:
+- `brain/next_actions.json` — agent-readable next research plan.
 - `data/keywords.jsonl` — durable registry, source evidence and observation history.
 - `data/queries.jsonl` — persistent query frontier and last-attempt metadata.
 - `opportunities/latest.csv` — heuristic priority and evidence classification.

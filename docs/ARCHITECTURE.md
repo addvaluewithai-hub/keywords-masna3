@@ -13,6 +13,12 @@
 
 File-based GitHub inbox/outbox is the primary interface. Requests are immutable jobs/requests/<id>.json documents validated in masna3/agent_jobs.py. Push on main triggers .github/workflows/agent-jobs.yml, which writes a status JSON under jobs/results and project-scoped snapshots. Jobs are idempotent by filename; per-provider calls remain bounded. AI-authored suggestions are recorded only as agent_hypothesis and must not count as independently validated search demand.
 
+## Research brain v0.2
+
+The planner is deterministic and provider-budget-aware, not a hosted language model. It prioritizes eligible queries based on configured buying signals, independent suggestion sources, first-provider coverage, refresh windows and past novelty yields. A prior query that returned no new keywords is penalized after the cooldown. Outputs are kept under projects/<slug>/brain/next_actions.json. Each market/provider lane includes explicit ready/blocked state, next queries and justifications.
+
+Plan jobs issue **zero** external requests. The twice-weekly scheduler refreshes plans for every project and calls the optional official Brave source only when configured. Agent-supplied proposals remain hypotheses and do not count as observed search demand. Scores are internal selection weights, not keyword popularity or difficulty measurements.
+
 ## Data path
 
 Project JSON config → seed import → provider adapter → normalized keyword registry + per-source evidence → query frontier → transparent heuristic ranking → per-project CSV + Markdown report → Git commit.

@@ -152,10 +152,11 @@ def run_project(root: Path, project: str, sources: list[str], per_locale: int = 
         for loc in config["locales"]:
             if throttled:
                 break
-            queries = store.candidates(
-                loc["code"], loc["seeds"], source, per_locale,
-                refresh_days=refresh_days,
-            )
+            # Feed provider requests from the evidence-led adaptive frontier.
+            from .brain import ranked_queries
+            queries = [item["query"] for item in ranked_queries(
+                store, loc, source, per_locale, refresh_days=refresh_days
+            )]
             for query in queries:
                 try:
                     suggestions = suggest(source, query, loc["language"], loc["country"])
@@ -176,5 +177,7 @@ def run_project(root: Path, project: str, sources: list[str], per_locale: int = 
                     time.sleep(pause_seconds)
     store.export()
     export_reports(folder, config, store, outcome)
+    from .brain import make_plan
+    make_plan(folder, config, store)
     outcome["total"] = len(store.keywords())
     return outcome

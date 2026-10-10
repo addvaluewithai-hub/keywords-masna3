@@ -65,6 +65,21 @@ class AgentQueueTests(unittest.TestCase):
         results = process_jobs(self.root)
         self.assertEqual([r["status"] for r in results], ["failed", "completed"])
 
+    def test_planner_job_produces_machine_plan_without_network(self):
+        self.submit("planjob1", {
+            "version": 1, "job_id": "planjob1", "kind": "plan",
+            "project": "qserve",
+        })
+        results = process_jobs(self.root)
+        self.assertEqual(results[0]["status"], "completed_with_notices")
+        self.assertEqual(results[0]["summary"]["requests"], 0)
+        plan_path = self.root / "projects/qserve/brain/next_actions.json"
+        self.assertTrue(plan_path.exists())
+        plan = json.loads(plan_path.read_text(encoding="utf-8"))
+        self.assertEqual(plan["project"], "qserve")
+        self.assertEqual(plan["markets"][0]["locale"], "en-US")
+        self.assertEqual(process_jobs(self.root), [])
+
     def test_reject_bad_locale_and_limits(self):
         self.submit("cccccc", {
             "version": 1, "job_id": "cccccc", "kind": "propose", "project": "qserve",

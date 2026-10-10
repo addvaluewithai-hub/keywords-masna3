@@ -28,6 +28,12 @@
         "jobs",
         "salary",
         "torrent"
+      ],
+      "probes": [
+        "qr menu",
+        "digital menu",
+        "restaurant qr code",
+        "restaurant digital menu"
       ]
     },
     {
@@ -49,6 +55,11 @@
       "exclude_signals": [
         "empleos",
         "trabajo"
+      ],
+      "probes": [
+        "menú qr",
+        "menú digital",
+        "precio menú digital"
       ]
     },
     {
@@ -70,6 +81,11 @@
       "exclude_signals": [
         "emprego",
         "vaga"
+      ],
+      "probes": [
+        "cardápio digital",
+        "cardápio qr",
+        "software cardápio digital"
       ]
     }
   ]

@@ -15,6 +15,8 @@ File-based GitHub inbox/outbox is the primary interface. Requests are immutable 
 
 ## Research brain v0.2
 
+Each locale can define compact exploration probes in project.json. These go into the *query frontier* only, not the keyword registry, until a suggestion API returns evidence. This helps overcome zero-result long seed phrases while keeping the provenance contract intact.
+
 The planner is deterministic and provider-budget-aware, not a hosted language model. It prioritizes eligible queries based on configured buying signals, independent suggestion sources, first-provider coverage, refresh windows and past novelty yields. A prior query that returned no new keywords is penalized after the cooldown. Outputs are kept under projects/<slug>/brain/next_actions.json. Each market/provider lane includes explicit ready/blocked state, next queries and justifications.
 
 Plan jobs issue **zero** external requests. The twice-weekly scheduler refreshes plans for every project and calls the optional official Brave source only when configured. Agent-supplied proposals remain hypotheses and do not count as observed search demand. Scores are internal selection weights, not keyword popularity or difficulty measurements.

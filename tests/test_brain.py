@@ -37,6 +37,17 @@ class BrainTests(unittest.TestCase):
         self.store.observe("en-US", "best digital menu software", "agent_hypothesis")
         self.store.observe("en-US", "restaurant menu pricing", "brave")
 
+    def test_probes_are_discovery_prompts_not_keyword_evidence(self):
+        import copy
+        locale = copy.deepcopy(LOCALE)
+        locale["probes"] = ["qr menu", "restaurant digital menu"]
+        before = len(self.store.keywords())
+        selected = ranked_queries(self.store, locale, "google", 10)
+        self.assertIn("qr menu", [q["query"] for q in selected])
+        self.assertIn("unverified_exploration_probe",
+                      next(q for q in selected if q["query"] == "qr menu")["reasons"])
+        self.assertEqual(len(self.store.keywords()), before)
+
     def test_plan_does_not_fake_api_access(self):
         with patch.dict(os.environ, {}, clear=True):
             plan = make_plan(self.folder, self.config, self.store, ["brave"])

@@ -28,11 +28,15 @@ def ranked_queries(store: Store, locale: dict, provider: str, limit: int,
             (code, provider),
         ).fetchall()
     }
+    probes = locale.get("probes", [])
+    # Probes are *query prompts*, NOT keywords and never become evidence
+    # until an external suggestion source actually returns a phrase.
     proposed = store.candidates(
-        code, locale["seeds"], provider, limit=5000,
+        code, list(dict.fromkeys(locale["seeds"] + probes)), provider, limit=5000,
         refresh_days=refresh_days, now=now,
     )
     ranked = []
+    probe_keys = {normalize(p) for p in probes}
     for phrase in proposed:
         norm = normalize(phrase)
         evidence = keywords.get(norm, {}).get("evidence", {"seed": {}})
@@ -46,6 +50,8 @@ def ranked_queries(store: Store, locale: dict, provider: str, limit: int,
         reasons = []
         if base["intent_signal_matches"]:
             reasons.append("buying_signal")
+        if norm in probe_keys:
+            reasons.append("unverified_exploration_probe")
         if verified_sources:
             reasons.append("observed_in_suggestion_source")
         else:
@@ -60,6 +66,8 @@ def ranked_queries(store: Store, locale: dict, provider: str, limit: int,
         # Exploration bonuses; repeated zero-yield queries are deprioritized.
         # Scores are research queue priorities, not measured SEO metrics.
         score = int(base["priority_score"])
+        if norm in probe_keys and not verified_sources:
+            score += 25  # Favor compact probes over repeatedly barren long seeds.
         score += min(12, 6 * len(verified_sources))
         if provider not in evidence:
             score += 5  # Independent-source verification opportunity.

@@ -1,0 +1,335 @@
+{
+  "generated_at": "2026-10-10T17:29:03+00:00",
+  "integrity": {
+    "agent_proposals_mean": "unverified hypotheses, not search demand",
+    "keyword_difficulty": null,
+    "monthly_search_volume": null,
+    "ranking_means": "heuristic research-priority only"
+  },
+  "markets": [
+    {
+      "country": "US",
+      "known_keywords": 5,
+      "language": "en",
+      "locale": "en-US",
+      "providers": {
+        "brave": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "restaurant guest experience software",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "restaurant table service app",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "BRAVE_API_KEY not configured",
+          "status": "blocked"
+        },
+        "duckduckgo": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "restaurant guest experience software",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "restaurant table service app",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        },
+        "google": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "restaurant guest experience software",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "restaurant table service app",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        }
+      },
+      "with_suggestion_evidence": 0,
+      "without_suggestion_evidence": 5
+    },
+    {
+      "country": "MX",
+      "known_keywords": 4,
+      "language": "es",
+      "locale": "es-MX",
+      "providers": {
+        "brave": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "software para menús de restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 77,
+              "query": "precio de menú digital para restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "BRAVE_API_KEY not configured",
+          "status": "blocked"
+        },
+        "duckduckgo": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "software para menús de restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 77,
+              "query": "precio de menú digital para restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        },
+        "google": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "software para menús de restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 77,
+              "query": "precio de menú digital para restaurantes",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        }
+      },
+      "with_suggestion_evidence": 0,
+      "without_suggestion_evidence": 4
+    },
+    {
+      "country": "BR",
+      "known_keywords": 4,
+      "language": "pt",
+      "locale": "pt-BR",
+      "providers": {
+        "brave": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "software de cardápio digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "cardápio digital para restaurante",
+              "reasons": [
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "BRAVE_API_KEY not configured",
+          "status": "blocked"
+        },
+        "duckduckgo": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "software de cardápio digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "cardápio digital para restaurante",
+              "reasons": [
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        },
+        "google": {
+          "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 88,
+              "query": "software de cardápio digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "cardápio digital para restaurante",
+              "reasons": [
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            }
+          ],
+          "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
+          "status": "blocked"
+        }
+      },
+      "with_suggestion_evidence": 0,
+      "without_suggestion_evidence": 4
+    }
+  ],
+  "next_action": "configure_available_source_or_wait_for_refresh",
+  "objective": "Get qualified restaurant and cafe operators to request early access",
+  "project": "qserve",
+  "ready_queries": 0,
+  "schema_version": 1,
+  "source_status": {
+    "brave": {
+      "blocker": "BRAVE_API_KEY not configured",
+      "historical_new_keywords": 0,
+      "historical_requests": 0,
+      "ready": false
+    },
+    "duckduckgo": {
+      "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
+      "historical_new_keywords": 0,
+      "historical_requests": 0,
+      "ready": false
+    },
+    "google": {
+      "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
+      "historical_new_keywords": 0,
+      "historical_requests": 0,
+      "ready": false
+    }
+  },
+  "stage": "frontend prototype — no live backend, service fulfillment or subscriptions",
+  "strategy": "ranked_discovery_frontier"
+}

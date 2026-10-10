@@ -1,0 +1,32 @@
+{
+  "artifacts": {
+    "keywords": "projects/qserve/data/keywords.jsonl",
+    "next_actions": "projects/qserve/brain/next_actions.json"
+  },
+  "finished_at": "2026-10-10T17:29:03+00:00",
+  "job_id": "qserve-brain-plan-20261010-01",
+  "kind": "plan",
+  "project": "qserve",
+  "request_sha256": "c36fb5627b1c21c3c48dad24a2c4d3a71d6fd0ca0ff6c425027c28d60a26f9a8",
+  "status": "completed_with_notices",
+  "summary": {
+    "date": "2026-10-10",
+    "markets": 3,
+    "new": 0,
+    "notices": [
+      "brave: BRAVE_API_KEY not configured",
+      "google: unofficial source disabled; pass --allow-unofficial explicitly",
+      "duckduckgo: unofficial source disabled; pass --allow-unofficial explicitly"
+    ],
+    "project": "qserve",
+    "ready_queries": 0,
+    "requests": 0,
+    "sources": [
+      "brave",
+      "google",
+      "duckduckgo"
+    ],
+    "total": 13
+  },
+  "version": 1
+}

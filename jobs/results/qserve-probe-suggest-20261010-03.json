@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "keywords": "projects/qserve/data/keywords.jsonl",
+    "next_actions": "projects/qserve/brain/next_actions.json",
+    "ranking": "projects/qserve/opportunities/latest.csv",
+    "report": "projects/qserve/reports/latest.md"
+  },
+  "finished_at": "2026-10-10T17:33:26+00:00",
+  "job_id": "qserve-probe-suggest-20261010-03",
+  "kind": "research",
+  "project": "qserve",
+  "request_sha256": "134759c705346b62fd9435dad14a152da667a7d0db88499db6f107b9ce3962fc",
+  "status": "completed",
+  "summary": {
+    "date": "2026-10-10",
+    "new": 11,
+    "notices": [],
+    "project": "qserve",
+    "requests": 3,
+    "sources": [
+      "google"
+    ],
+    "total": 34
+  },
+  "version": 1
+}

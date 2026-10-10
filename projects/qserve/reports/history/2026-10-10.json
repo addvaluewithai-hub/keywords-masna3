@@ -1,10 +1,10 @@
 {
   "date": "2026-10-10",
-  "known_keywords": 23,
-  "new_keywords": 8,
+  "known_keywords": 34,
+  "new_keywords": 11,
   "notices": [],
   "project": "qserve",
-  "requests": 6,
+  "requests": 3,
   "sources": [
     "google"
   ]

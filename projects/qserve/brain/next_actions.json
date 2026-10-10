@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T17:31:50+00:00",
+  "generated_at": "2026-10-10T17:33:26+00:00",
   "integrity": {
     "agent_proposals_mean": "unverified hypotheses, not search demand",
     "keyword_difficulty": null,
@@ -9,7 +9,7 @@
   "markets": [
     {
       "country": "US",
-      "known_keywords": 5,
+      "known_keywords": 15,
       "language": "en",
       "locale": "en-US",
       "providers": {
@@ -84,9 +84,10 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 74,
-              "query": "digital menu for cafes",
+              "priority": 80,
+              "query": "qr menu",
               "reasons": [
+                "unverified_exploration_probe",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -101,9 +102,10 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 74,
-              "query": "digital menu for cafes",
+              "priority": 80,
+              "query": "qr menu",
               "reasons": [
+                "unverified_exploration_probe",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -112,9 +114,22 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 74,
-              "query": "qr code menu for restaurants",
+              "priority": 80,
+              "query": "restaurant digital menu",
               "reasons": [
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 78,
+              "query": "restaurant qr code",
+              "reasons": [
+                "unverified_exploration_probe",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -125,17 +140,30 @@
           "status": "blocked"
         }
       },
-      "with_suggestion_evidence": 0,
+      "with_suggestion_evidence": 10,
       "without_suggestion_evidence": 5
     },
     {
       "country": "MX",
-      "known_keywords": 9,
+      "known_keywords": 10,
       "language": "es",
       "locale": "es-MX",
       "providers": {
         "brave": {
           "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 94,
+              "query": "precio menú digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
             {
               "previous_novel": null,
               "previous_results": null,
@@ -161,20 +189,6 @@
               "verified_suggestion_sources": [
                 "google"
               ]
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 79,
-              "query": "sistema de menu digital para restaurantes",
-              "reasons": [
-                "buying_signal",
-                "observed_in_suggestion_source",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
             }
           ],
           "reason": "BRAVE_API_KEY not configured",
@@ -182,6 +196,19 @@
         },
         "duckduckgo": {
           "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 94,
+              "query": "precio menú digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
             {
               "previous_novel": null,
               "previous_results": null,
@@ -199,29 +226,14 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 79,
-              "query": "sistema de menu digital para restaurantes",
+              "priority": 83,
+              "query": "menú digital",
               "reasons": [
-                "buying_signal",
-                "observed_in_suggestion_source",
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
                 "first_query_for_provider"
               ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 77,
-              "query": "menú digital para restaurantes gratis",
-              "reasons": [
-                "observed_in_suggestion_source",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
+              "verified_suggestion_sources": []
             }
           ],
           "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
@@ -232,6 +244,30 @@
             {
               "previous_novel": null,
               "previous_results": null,
+              "priority": 83,
+              "query": "menú digital",
+              "reasons": [
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 83,
+              "query": "menú qr",
+              "reasons": [
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
               "priority": 74,
               "query": "menú digital para restaurantes",
               "reasons": [
@@ -239,38 +275,13 @@
                 "first_query_for_provider"
               ],
               "verified_suggestion_sources": []
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 74,
-              "query": "menú qr para cafeterías",
-              "reasons": [
-                "unverified_research_candidate",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": []
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 74,
-              "query": "sistema de menu digital para restaurantes",
-              "reasons": [
-                "buying_signal",
-                "observed_in_suggestion_source",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
             }
           ],
           "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
           "status": "blocked"
         }
       },
-      "with_suggestion_evidence": 5,
+      "with_suggestion_evidence": 6,
       "without_suggestion_evidence": 4
     },
     {
@@ -281,6 +292,19 @@
       "providers": {
         "brave": {
           "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 100,
+              "query": "software cardápio digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
             {
               "previous_novel": null,
               "previous_results": null,
@@ -305,20 +329,6 @@
               "verified_suggestion_sources": [
                 "google"
               ]
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 78,
-              "query": "software cardapio digital",
-              "reasons": [
-                "buying_signal",
-                "observed_in_suggestion_source",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
             }
           ],
           "reason": "BRAVE_API_KEY not configured",
@@ -326,6 +336,19 @@
         },
         "duckduckgo": {
           "next_queries": [
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 100,
+              "query": "software cardápio digital",
+              "reasons": [
+                "buying_signal",
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
             {
               "previous_novel": null,
               "previous_results": null,
@@ -342,23 +365,10 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 78,
-              "query": "software cardapio digital",
+              "priority": 83,
+              "query": "cardápio digital",
               "reasons": [
-                "buying_signal",
-                "observed_in_suggestion_source",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 74,
-              "query": "cardápio qr para cafeteria",
-              "reasons": [
+                "unverified_exploration_probe",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -373,24 +383,10 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 73,
-              "query": "software cardapio digital",
+              "priority": 83,
+              "query": "cardápio digital",
               "reasons": [
-                "buying_signal",
-                "observed_in_suggestion_source",
-                "first_query_for_provider"
-              ],
-              "verified_suggestion_sources": [
-                "google"
-              ]
-            },
-            {
-              "previous_novel": null,
-              "previous_results": null,
-              "priority": 69,
-              "query": "sistema de cardápio digital para restaurantes",
-              "reasons": [
-                "buying_signal",
+                "unverified_exploration_probe",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -399,9 +395,22 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 68,
-              "query": "como fazer cardápio digital para restaurante",
+              "priority": 83,
+              "query": "cardápio qr",
               "reasons": [
+                "unverified_exploration_probe",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 73,
+              "query": "software cardapio digital",
+              "reasons": [
+                "buying_signal",
                 "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
@@ -447,12 +456,12 @@
     },
     "google": {
       "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
-      "historical_new_keywords": 10,
-      "historical_requests": 9,
+      "historical_new_keywords": 21,
+      "historical_requests": 12,
       "ready": false,
-      "recorded_novel_events": 8,
-      "recorded_novel_per_request": 1.333,
-      "recorded_request_events": 6,
+      "recorded_novel_events": 19,
+      "recorded_novel_per_request": 2.111,
+      "recorded_request_events": 9,
       "sample_size_warning": "insufficient_requests"
     }
   },

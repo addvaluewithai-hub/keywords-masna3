@@ -4,3 +4,6 @@
 {"locale": "es-MX", "novel": 4, "phrase": "precio de menú digital para restaurantes", "provider": "google", "results": 4, "run_at": "2026-10-10T17:31:47+00:00"}
 {"locale": "pt-BR", "novel": 4, "phrase": "cardápio digital para restaurante", "provider": "google", "results": 5, "run_at": "2026-10-10T17:31:48+00:00"}
 {"locale": "pt-BR", "novel": 0, "phrase": "cardápio qr para cafeteria", "provider": "google", "results": 0, "run_at": "2026-10-10T17:31:49+00:00"}
+{"locale": "en-US", "novel": 10, "phrase": "digital menu", "provider": "google", "results": 10, "run_at": "2026-10-10T17:33:23+00:00"}
+{"locale": "es-MX", "novel": 1, "phrase": "precio menú digital", "provider": "google", "results": 1, "run_at": "2026-10-10T17:33:24+00:00"}
+{"locale": "pt-BR", "novel": 0, "phrase": "software cardápio digital", "provider": "google", "results": 1, "run_at": "2026-10-10T17:33:25+00:00"}

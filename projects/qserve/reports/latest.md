@@ -2,9 +2,9 @@
 
 Run: 2026-10-10  |  Project: qserve
 
-- Total known keywords: **23**
-- New keywords this run: **8**
-- Successful provider requests: **6**
+- Total known keywords: **34**
+- New keywords this run: **11**
+- Successful provider requests: **3**
 - Sources selected: **google**
 
 ## Top 20 research opportunities
@@ -27,10 +27,10 @@ Run: 2026-10-10  |  Project: qserve
 | es-MX | sistema de menu digital para restaurantes | 56 | single-source |
 | pt-BR | software cardapio digital | 55 | single-source |
 | es-MX | menú digital para restaurantes gratis | 54 | single-source |
+| en-US | digital menu board software | 53 | single-source |
 | pt-BR | sistema de cardápio digital para restaurantes | 52 | seed-only |
 | pt-BR | como fazer cardápio digital para restaurante | 50 | single-source |
 | pt-BR | modelo de cardápio digital para restaurante | 50 | single-source |
-| es-MX | menu digital para restaurantes | 48 | single-source |
 
 ## Measurement integrity
 

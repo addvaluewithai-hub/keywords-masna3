@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "keywords": "projects/qserve/data/keywords.jsonl",
+    "next_actions": "projects/qserve/brain/next_actions.json",
+    "ranking": "projects/qserve/opportunities/latest.csv",
+    "report": "projects/qserve/reports/latest.md"
+  },
+  "finished_at": "2026-10-10T17:29:43+00:00",
+  "job_id": "qserve-suggest-smoketest-20261010-01",
+  "kind": "research",
+  "project": "qserve",
+  "request_sha256": "2d88b6b83d6028317beb8b63cc8cf0e1e7a9efeff88a3ffaf19267e5d6739aaa",
+  "status": "completed",
+  "summary": {
+    "date": "2026-10-10",
+    "new": 2,
+    "notices": [],
+    "project": "qserve",
+    "requests": 6,
+    "sources": [
+      "google",
+      "duckduckgo"
+    ],
+    "total": 15
+  },
+  "version": 1
+}

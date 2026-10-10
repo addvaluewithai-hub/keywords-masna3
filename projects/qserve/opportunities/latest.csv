@@ -4,6 +4,7 @@ en-US,restaurant table service app,71,seed-only,app,seed,2026-10-10T16:43:40+00:
 es-MX,software para menús de restaurantes,71,seed-only,software,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
 pt-BR,software de cardápio digital,71,seed-only,software,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
 en-US,best digital menu software for small restaurants,64,seed-only,"software, best",agent_hypothesis,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
+es-MX,software para menus de restaurantes,64,single-source,software,google,2026-10-10T17:29:38+00:00,2026-10-10T17:29:38+00:00,,
 es-MX,precio de menú digital para restaurantes,60,seed-only,precio,agent_hypothesis,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
 en-US,digital menu for cafes,57,seed-only,,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
 en-US,qr code menu for restaurants,57,seed-only,,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
@@ -11,4 +12,5 @@ es-MX,menú digital para restaurantes,57,seed-only,,seed,2026-10-10T16:43:40+00:
 es-MX,menú qr para cafeterías,57,seed-only,,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
 pt-BR,cardápio digital para restaurante,57,seed-only,,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
 pt-BR,cardápio qr para cafeteria,57,seed-only,,seed,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,
+pt-BR,software cardapio digital,55,single-source,software,google,2026-10-10T17:29:39+00:00,2026-10-10T17:29:39+00:00,,
 pt-BR,sistema de cardápio digital para restaurantes,52,seed-only,sistema,agent_hypothesis,2026-10-10T16:43:40+00:00,2026-10-10T16:43:40+00:00,,

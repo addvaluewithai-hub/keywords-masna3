@@ -1,13 +1,12 @@
 {
   "date": "2026-10-10",
-  "known_keywords": 13,
-  "new_keywords": 13,
-  "notices": [
-    "Agent proposals are research hypotheses, NOT independent evidence of search demand."
-  ],
+  "known_keywords": 15,
+  "new_keywords": 2,
+  "notices": [],
   "project": "qserve",
-  "requests": 0,
+  "requests": 6,
   "sources": [
-    "agent_hypothesis"
+    "google",
+    "duckduckgo"
   ]
 }

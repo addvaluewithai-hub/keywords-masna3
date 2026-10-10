@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T17:29:03+00:00",
+  "generated_at": "2026-10-10T17:29:43+00:00",
   "integrity": {
     "agent_proposals_mean": "unverified hypotheses, not search demand",
     "keyword_difficulty": null,
@@ -38,6 +38,18 @@
                 "first_query_for_provider"
               ],
               "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 81,
+              "query": "best digital menu software for small restaurants",
+              "reasons": [
+                "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
             }
           ],
           "reason": "BRAVE_API_KEY not configured",
@@ -49,7 +61,7 @@
               "previous_novel": null,
               "previous_results": null,
               "priority": 88,
-              "query": "restaurant guest experience software",
+              "query": "restaurant table service app",
               "reasons": [
                 "buying_signal",
                 "unverified_research_candidate",
@@ -60,10 +72,21 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "restaurant table service app",
+              "priority": 81,
+              "query": "best digital menu software for small restaurants",
               "reasons": [
                 "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "digital menu for cafes",
+              "reasons": [
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -79,7 +102,7 @@
               "previous_novel": null,
               "previous_results": null,
               "priority": 88,
-              "query": "restaurant guest experience software",
+              "query": "restaurant table service app",
               "reasons": [
                 "buying_signal",
                 "unverified_research_candidate",
@@ -90,10 +113,21 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "restaurant table service app",
+              "priority": 81,
+              "query": "best digital menu software for small restaurants",
               "reasons": [
                 "buying_signal",
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "digital menu for cafes",
+              "reasons": [
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -109,7 +143,7 @@
     },
     {
       "country": "MX",
-      "known_keywords": 4,
+      "known_keywords": 5,
       "language": "es",
       "locale": "es-MX",
       "providers": {
@@ -130,6 +164,20 @@
             {
               "previous_novel": null,
               "previous_results": null,
+              "priority": 87,
+              "query": "software para menus de restaurantes",
+              "reasons": [
+                "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
               "priority": 77,
               "query": "precio de menú digital para restaurantes",
               "reasons": [
@@ -148,8 +196,22 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "software para menús de restaurantes",
+              "priority": 87,
+              "query": "software para menus de restaurantes",
+              "reasons": [
+                "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 77,
+              "query": "precio de menú digital para restaurantes",
               "reasons": [
                 "buying_signal",
                 "unverified_research_candidate",
@@ -160,10 +222,9 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 77,
-              "query": "precio de menú digital para restaurantes",
+              "priority": 74,
+              "query": "menú digital para restaurantes",
               "reasons": [
-                "buying_signal",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -178,14 +239,16 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "software para menús de restaurantes",
+              "priority": 82,
+              "query": "software para menus de restaurantes",
               "reasons": [
                 "buying_signal",
-                "unverified_research_candidate",
+                "observed_in_suggestion_source",
                 "first_query_for_provider"
               ],
-              "verified_suggestion_sources": []
+              "verified_suggestion_sources": [
+                "google"
+              ]
             },
             {
               "previous_novel": null,
@@ -198,18 +261,29 @@
                 "first_query_for_provider"
               ],
               "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "menú digital para restaurantes",
+              "reasons": [
+                "unverified_research_candidate",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": []
             }
           ],
           "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
           "status": "blocked"
         }
       },
-      "with_suggestion_evidence": 0,
+      "with_suggestion_evidence": 1,
       "without_suggestion_evidence": 4
     },
     {
       "country": "BR",
-      "known_keywords": 4,
+      "known_keywords": 5,
       "language": "pt",
       "locale": "pt-BR",
       "providers": {
@@ -230,6 +304,20 @@
             {
               "previous_novel": null,
               "previous_results": null,
+              "priority": 78,
+              "query": "software cardapio digital",
+              "reasons": [
+                "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
               "priority": 74,
               "query": "cardápio digital para restaurante",
               "reasons": [
@@ -247,10 +335,23 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "software de cardápio digital",
+              "priority": 78,
+              "query": "software cardapio digital",
               "reasons": [
                 "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 74,
+              "query": "cardápio digital para restaurante",
+              "reasons": [
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -260,7 +361,7 @@
               "previous_novel": null,
               "previous_results": null,
               "priority": 74,
-              "query": "cardápio digital para restaurante",
+              "query": "cardápio qr para cafeteria",
               "reasons": [
                 "unverified_research_candidate",
                 "first_query_for_provider"
@@ -276,10 +377,9 @@
             {
               "previous_novel": null,
               "previous_results": null,
-              "priority": 88,
-              "query": "software de cardápio digital",
+              "priority": 74,
+              "query": "cardápio digital para restaurante",
               "reasons": [
-                "buying_signal",
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
@@ -289,19 +389,33 @@
               "previous_novel": null,
               "previous_results": null,
               "priority": 74,
-              "query": "cardápio digital para restaurante",
+              "query": "cardápio qr para cafeteria",
               "reasons": [
                 "unverified_research_candidate",
                 "first_query_for_provider"
               ],
               "verified_suggestion_sources": []
+            },
+            {
+              "previous_novel": null,
+              "previous_results": null,
+              "priority": 73,
+              "query": "software cardapio digital",
+              "reasons": [
+                "buying_signal",
+                "observed_in_suggestion_source",
+                "first_query_for_provider"
+              ],
+              "verified_suggestion_sources": [
+                "google"
+              ]
             }
           ],
           "reason": "unofficial source disabled; pass --allow-unofficial explicitly",
           "status": "blocked"
         }
       },
-      "with_suggestion_evidence": 0,
+      "with_suggestion_evidence": 1,
       "without_suggestion_evidence": 4
     }
   ],
@@ -320,13 +434,13 @@
     "duckduckgo": {
       "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
       "historical_new_keywords": 0,
-      "historical_requests": 0,
+      "historical_requests": 3,
       "ready": false
     },
     "google": {
       "blocker": "unofficial source disabled; pass --allow-unofficial explicitly",
-      "historical_new_keywords": 0,
-      "historical_requests": 0,
+      "historical_new_keywords": 2,
+      "historical_requests": 3,
       "ready": false
     }
   },

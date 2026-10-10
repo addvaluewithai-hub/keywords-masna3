@@ -44,5 +44,32 @@
       "goal": "Research table-linked menus and guest actions with genuine provider evidence; don't invent demand."
     }
   ],
-  "automation_boundary": "GitHub workflows may collect/validate data; semantic decisions are authored during connected agent execution and must not be overwritten by heuristics."
+  "automation_boundary": "GitHub workflows may collect/validate data; semantic decisions are authored during connected agent execution and must not be overwritten by heuristics.",
+  "human_assistance_ledger": "HUMAN_REQUESTS.md",
+  "pending_human_requests": [
+    {
+      "id": "HR-QSERVE-001",
+      "urgency": "SOON",
+      "impact": "CRITICAL",
+      "scope": "pre-publication conversion readiness"
+    },
+    {
+      "id": "HR-QSERVE-002",
+      "urgency": "WHEN CONVENIENT",
+      "impact": "HIGH",
+      "scope": "optional official source access"
+    },
+    {
+      "id": "HR-QSERVE-003",
+      "urgency": "WHEN CONVENIENT",
+      "impact": "HIGH",
+      "scope": "optional measured keyword demand"
+    },
+    {
+      "id": "HR-QSERVE-004",
+      "urgency": "LATER",
+      "impact": "HIGH",
+      "scope": "post-launch search-performance feedback"
+    }
+  ]
 }

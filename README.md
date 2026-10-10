@@ -6,6 +6,10 @@ The **thinking core is a connected AI agent (ChatGPT in an active session)**. Gi
 
 > **Reality check:** Autocomplete suggestions are not monthly search volume. The research score is a heuristic, not verified search volume, SEO difficulty or ranking probability. The engine never invents those measurements.
 
+## Agent → human requests
+
+The agent maintains [HUMAN_REQUESTS.md](HUMAN_REQUESTS.md), an auditable list of human assistance requests with separate **urgency** and **expected impact**, current status, cost/effort, safe delivery method and fallback. Humans never need to operate a dashboard or edit the repository: the agent can present the relevant request in a conversation. This public file must **never** contain API keys, credentials or private account information.
+
 ## For AI agents (primary interface)
 
 **Start with [agent/REASONING_PROTOCOL.md](agent/REASONING_PROTOCOL.md).** The reasoning agent makes semantic SEO judgments itself and commits rationale to project intelligence files. Mechanical heuristic scores are never editorial approvals.

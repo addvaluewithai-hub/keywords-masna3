@@ -5,6 +5,7 @@
 ## Entry points
 
 - Machine manifest: agent/manifest.json
+- **Human help requests:** HUMAN_REQUESTS.md (agent-owned shared human-dependency ledger)
 - Project configs: projects/<slug>/project.json
 - Prior knowledge: projects/<slug>/data/keywords.jsonl
 - Latest ranking: projects/<slug>/opportunities/latest.csv
@@ -16,14 +17,15 @@
 
 ## Agent protocol
 
-1. Read agent/manifest.json and the target project's configuration. Check project objective, supported locales and current product stage.
+1. Read agent/manifest.json, HUMAN_REQUESTS.md, and the target project's configuration. Check project objective, supported locales and current product stage.
 2. Read its existing research artifacts if present. Missing artifacts are expected for a new project.
 3. Read projects/<slug>/intelligence/status.json (when present) and treat agent-authored semantic reviews as the editorial decision layer. Check projects/<slug>/brain/next_actions.json only for mechanical next-query suggestions. Choose PLAN (refresh adaptive frontier), PROPOSE (unverified hypotheses), or RESEARCH (real suggestion providers). Research prioritization now reads historical yield; do not manually assume a higher heuristic score equals higher traffic.
 4. Submit one immutable JSON job on the main branch by creating jobs/requests/<job_id>.json through the connected GitHub file-creation tool.
 5. A push-triggered GitHub Action processes the inbox and commits jobs/results/<job_id>.json plus per-project artifacts.
 6. Do not assume that a request commit proves completion. Fetch jobs/results/<job_id>.json and inspect status. A missing file means queued or pending investigation.
 7. Read the artifact paths given by the result. Only describe measured results and documented evidence.
-8. Subsequent agents resume by reading GitHub state; conversation history is never the source of truth.
+8. When human help would materially improve the research, first consult HUMAN_REQUESTS.md for an existing request; add/update a uniquely identified item with urgency, impact, rationale, fallback and completion evidence. Do not block independent work or ask the same thing repeatedly. Never commit secret values.
+9. Subsequent agents resume by reading GitHub state; conversation history is never the source of truth.
 
 ## Request: PLAN (the free research brain)
 

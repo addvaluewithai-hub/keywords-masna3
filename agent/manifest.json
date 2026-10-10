@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "name": "Keywords Masna3",
   "interaction": "github-file-inbox-outbox",
   "repository": "addvaluewithai-hub/keywords-masna3",
@@ -82,5 +82,46 @@
     "jobs_runner": ".github/workflows/agent-jobs.yml",
     "query_planner": "masna3/brain.py",
     "description": "Query frontier and heuristic scoring, NOT an LLM or editorial authority"
+  },
+  "human_assistance": {
+    "ledger": "HUMAN_REQUESTS.md",
+    "owner": "reasoning_agent",
+    "ui_required": false,
+    "purpose": "Escalate external access/data/decisions that materially improve outcomes while preserving fallbacks and status.",
+    "required_fields": [
+      "id",
+      "project",
+      "request",
+      "reason",
+      "urgency",
+      "impact",
+      "status",
+      "cost_or_effort",
+      "fallback",
+      "completion_evidence"
+    ],
+    "urgency_values": [
+      "NOW",
+      "SOON",
+      "WHEN CONVENIENT",
+      "LATER"
+    ],
+    "impact_values": [
+      "CRITICAL",
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "status_values": [
+      "OPEN",
+      "WAITING PREREQUISITE",
+      "IN PROGRESS",
+      "FULFILLED",
+      "DECLINED",
+      "CANCELLED"
+    ],
+    "notification_mode": "only_surface_in_active_agent_conversation",
+    "security": "Public GitHub file. Never store credentials/tokens; use supported secrets or connectors.",
+    "project_budget": "zero_until_explicitly_authorized"
   }
 }

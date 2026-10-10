@@ -9,6 +9,10 @@
 5. **Local-first:** use an in-memory SQLite working store and commit human-readable JSONL/CSV reports instead of repeatedly committing a binary database.
 6. **Privacy:** no account IDs, secrets, email lists or customer data should enter a public project snapshot.
 
+## Agent transport
+
+File-based GitHub inbox/outbox is the primary interface. Requests are immutable jobs/requests/<id>.json documents validated in masna3/agent_jobs.py. Push on main triggers .github/workflows/agent-jobs.yml, which writes a status JSON under jobs/results and project-scoped snapshots. Jobs are idempotent by filename; per-provider calls remain bounded. AI-authored suggestions are recorded only as agent_hypothesis and must not count as independently validated search demand.
+
 ## Data path
 
 Project JSON config → seed import → provider adapter → normalized keyword registry + per-source evidence → query frontier → transparent heuristic ranking → per-project CSV + Markdown report → Git commit.

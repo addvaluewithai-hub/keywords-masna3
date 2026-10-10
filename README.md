@@ -6,6 +6,12 @@ One engine, separate research folders for each project. It discovers suggestions
 
 > **Reality check:** Autocomplete suggestions are not monthly search volume. The research score is a heuristic, not verified search volume, SEO difficulty or ranking probability. The engine never invents those measurements.
 
+## For AI agents (primary interface)
+
+**This is an agent-only system.** No operator dashboard and no manual workflows are required. Read [AGENTS.md](AGENTS.md) and the machine-readable [agent/manifest.json](agent/manifest.json) first.
+
+An agent interacts entirely through connected GitHub operations: create an immutable JSON request at jobs/requests/<job_id>.json; a push-triggered Action processes it; inspect jobs/results/<job_id>.json and the output under projects/<slug>/. Requests may either record labeled hypotheses or use configured suggestion providers. No request commit should be mistaken for completed research. All results persist for the next agent.
+
 ## Current capabilities (v0.1)
 
 - Per-project configuration in `projects/<slug>/project.json`; multiple markets and languages per project.
@@ -18,7 +24,9 @@ One engine, separate research folders for each project. It discovers suggestions
 - Explainable priority CSV and Markdown reports, with monthly volume and difficulty left blank.
 - Unit tests, weekly GitHub Actions research workflow, and manual runs.
 
-## Try it locally
+## Developer-only diagnostics (the agent interface is GitHub JSON jobs)
+
+### Try it locally
 
 Requirements: Python 3.11+.
 

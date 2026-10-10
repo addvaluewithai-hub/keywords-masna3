@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "job_id": "qserve-agent-demo-20261010-01",
+  "kind": "propose",
+  "project": "qserve",
+  "proposals": [
+    {
+      "locale": "en-US",
+      "keyword": "best digital menu software for small restaurants",
+      "reason": "Commercial-intent candidate for QServe. Not yet validated by autocomplete or measured search-volume data."
+    },
+    {
+      "locale": "es-MX",
+      "keyword": "precio de menú digital para restaurantes",
+      "reason": "Candidate Spanish-language pricing intent in Mexico; actual query demand unverified."
+    },
+    {
+      "locale": "pt-BR",
+      "keyword": "sistema de cardápio digital para restaurantes",
+      "reason": "Candidate Brazilian Portuguese transactional query; search demand unverified."
+    }
+  ]
+}
